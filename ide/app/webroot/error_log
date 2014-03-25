@@ -1,0 +1,19 @@
+[05-Feb-2014 14:55:10] PHP Fatal error:  Class 'praent' not found in /home/abicambo/public_html/ide/app/Controller/ClientsController.php on line 204
+[05-Feb-2014 15:17:36] PHP Fatal error:  Class 'AppController' not found in /home/abicambo/public_html/ide/app/Controller/ClientsController.php on line 2
+[05-Feb-2014 15:17:41] PHP Parse error:  syntax error, unexpected ')', expecting ',' or ';' in /home/abicambo/public_html/ide/app/Controller/AppController.php on line 44
+[05-Feb-2014 15:17:57] PHP Fatal error:  Call to a member function allow() on a non-object in /home/abicambo/public_html/ide/app/Controller/ClientsController.php on line 204
+[05-Feb-2014 15:19:50] PHP Fatal error:  Call to a member function allow() on a non-object in /home/abicambo/public_html/ide/app/Controller/UsersController.php on line 55
+[05-Feb-2014 15:20:43] PHP Fatal error:  Call to a member function allow() on a non-object in /home/abicambo/public_html/ide/app/Controller/ClientsController.php on line 204
+[05-Feb-2014 15:20:47] PHP Fatal error:  Call to a member function allow() on a non-object in /home/abicambo/public_html/ide/app/Controller/ClientsController.php on line 204
+[05-Feb-2014 15:20:59] PHP Fatal error:  Call to a member function allow() on a non-object in /home/abicambo/public_html/ide/app/Controller/ClientsController.php on line 204
+[05-Feb-2014 15:21:02] PHP Fatal error:  Call to a member function allow() on a non-object in /home/abicambo/public_html/ide/app/Controller/ClientsController.php on line 204
+[05-Feb-2014 15:21:05] PHP Fatal error:  Call to a member function allow() on a non-object in /home/abicambo/public_html/ide/app/Controller/ClientsController.php on line 204
+[05-Feb-2014 15:56:44] PHP Fatal error:  Call to a member function allow() on a non-object in /home/abicambo/public_html/ide/app/Controller/ClientsController.php on line 203
+[04-Mar-2014 13:35:00] PHP Fatal error:  Uncaught exception 'RuntimeException' with message 'SplFileObject::__construct(/home/abicambo/public_html/ide/app/tmp/cache/models/myapp_cake_model_default_abicambo_ide_sales) [<a href='splfileobject.--construct'>splfileobject.--construct</a>]: failed to open stream: No such file or directory' in /home/abicambo/public_html/ide/lib/Cake/Cache/Engine/FileEngine.php:278
+Stack trace:
+#0 /home/abicambo/public_html/ide/lib/Cake/Cache/Engine/FileEngine.php(278): SplFileObject->__construct('/home/abicambo/...', 'r')
+#1 /home/abicambo/public_html/ide/lib/Cake/Cache/Engine/FileEngine.php(235): FileEngine->_clearDirectory('/home/abicambo/...', 1393914900, 1393914890)
+#2 /home/abicambo/public_html/ide/lib/Cake/Cache/Engine/FileEngine.php(100): FileEngine->clear(true)
+#3 /home/abicambo/public_html/ide/lib/Cake/Cache/Cache.php(184): FileEngine->gc()
+#4 /home/abicambo/public_html/ide/lib/Cake/Cache/Cache.php(151): Cache::_buildEngine('_cake_model_')
+#5 /home/abicambo/public_html/ide/app/Config/core.php(378): Cache::config(' in /home/abicambo/public_html/ide/lib/Cake/Cache/Engine/FileEngine.php on line 278
