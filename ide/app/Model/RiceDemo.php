@@ -2,11 +2,11 @@
 	Class RiceDemo extends AppModel
 	{
 		var $name = 'RiceDemo';
-		var $useTable=false;
+		var $useTable='vw_ricedemos';
 
-		public function paginate($conditions, $fields, $order, $limit, $page = 1, $recursive = null, $extra = array()) 
+		/*public function paginate($conditions, $fields, $order, $limit, $page = 1, $recursive = null, $extra = array()) 
 		{
-		   
+			var_dump($conditions);		   
 		   
 		    $sql="SELECT * FROM vw_ricedemos LIMIT " . (($page - 1) * $limit) . ', ' . $limit;
 		    $results = $this->query($sql);
@@ -20,7 +20,7 @@
 					return  $results[0][0]['total'];
 					    
 					   
-		}
+		}*/
 		/*public function paginate($conditions, $fields, $order, $limit, $page = 1, $recursive = null, $extra = array()) 
 		{
 		   

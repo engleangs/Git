@@ -325,6 +325,17 @@ class AppController extends Controller {
 	{
 		
 	}
+	public function changeDate($date)
+	{ 
+		$dates = explode("/", $date);
+		$temp = trim( trim(@$dates[2]).'-'.trim(@$dates[0]).'-'.trim(@$dates[1])); 
+		
+		return $temp;
+	}
+	public function index()
+	{
+		return $this->redirect(array('action'=>'listing'));
+	}
 
 	
 }

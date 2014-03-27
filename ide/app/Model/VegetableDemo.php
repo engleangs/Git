@@ -2,8 +2,8 @@
 	Class VegetableDemo extends AppModel
 	{
 		var $name = 'VegetableDemo';
-		var $useTable=false;
-		public function paginate($conditions, $fields, $order, $limit, $page = 1, $recursive = null, $extra = array()) 
+		var $useTable='vw_vegetabledemos';
+		/*public function paginate($conditions, $fields, $order, $limit, $page = 1, $recursive = null, $extra = array()) 
 		{
 		   
 		   
@@ -19,7 +19,7 @@
 					return  $results[0][0]['total'];
 					    
 					   
-		}
+		}*/
 		
 		/*public function paginate($conditions, $fields, $order, $limit, $page = 1, $recursive = null, $extra = array()) 
 		{

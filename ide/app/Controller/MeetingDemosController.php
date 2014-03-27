@@ -1,11 +1,12 @@
-<?php
-	Class VendorDemosController extends AppController
+<?php 
+	class MeetingDemosController extends AppController
 	{
-		
 		public $helpers = array('Html', 'Form');
 		public $components = array('Session');
-		public $context ="VendorDemo";
-		public $paginate = array('limit' =>30);
+		public $name = "MeetingDemos";	
+		public $context ="MeetingDemo";
+		public $paginate = array('limit' =>30);		
+		var $condition = array();
 		public function setCondition()
     	{
     	
@@ -13,10 +14,7 @@
     		{
     			$this->Session->write('Filter.date_range',$this->request->data['date-range']);
     		}
-    		if(isset($this->request->data['subject_number']))
-    		{
-    			$this->Session->write('Subject_Number',$this->request->data['subject_number']);
-    		}
+    		
     		if($date_range = $this->Session->read('Filter.date_range'))
     		{
     			$this->set('date_range',$date_range );
@@ -24,14 +22,10 @@
 				$date_start = $this->changeDate(@$dates[0]);
 				$date_end 	= $this->changeDate(@$dates[1]);
     			$this->condition = array(
-    										'vendor_datestarted BETWEEN ? AND ?'=>
+    										'meeting_date BETWEEN ? AND ?'=>
 															 	array($date_start, $date_end)
 													);
-    		}
-    		if($subject_number = $this->Session->read('Subject_Number'))
-    		{
-    			$this->set('subject_number',$subject_number);
-    		}
+    		}    		
     		$this->paginate['conditions'] = $this->condition;
 
     	}
@@ -92,8 +86,5 @@
 			$this->layout ='ajax';
 			
 		}
-		
-		
-		
 	}
 ?>

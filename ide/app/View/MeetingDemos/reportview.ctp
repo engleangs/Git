@@ -56,7 +56,7 @@ $subjectNumber = isset($subject_number)?$subject_number:1;
                                             <input 
                                                     type="text" class="form-control" 
                                                         name="date-range" 
-                                                        placeholder="Filter between date of training..."
+                                                        placeholder="Filter between date of meeting..."
                                                         value="<?php echo @$date_range ?>"
 
                                                         id="daterange"
@@ -64,20 +64,10 @@ $subjectNumber = isset($subject_number)?$subject_number:1;
                                             <span class="input-group-addon"  
                                                     onclick="document.getElementById('adminForm').submit();"
                                                     rel='tooltip' ata-placement='left' 
-                                                data-original-title='Click to filter by date training'  style="cursor:pointer;"><i class="fa fa-search"></i></span>
+                                                data-original-title='Click to filter by date meeting'  style="cursor:pointer;"><i class="fa fa-search"></i></span>
                             </div>
                            
-                        </div><!-- /.col-lg-6 -->
-                    <div class="col-sm-3 pull-right">
-                        Number of Subject :
-                           <select name="subject_number" class="select2" onchange="document.getElementById('adminForm').submit();">
-                                <?php for($i=1;$i<5;$i++) :?>
-                                    <option <?php if($i==$subjectNumber) echo ' selected = "selected"' ?>>
-                                            <?php echo $i ?>
-                                    </option>
-                                <?php endfor; ?>
-                           </select>
-                    </div><!-- /.col-lg-6 -->
+                        </div><!-- /.col-lg-6 -->                    
               </div>
                 <div class="table-responsive">
                 <table cellpadding="0" cellspacing="0" border="0" class="table table-report table-striped table-bordered" id="example">
@@ -85,17 +75,13 @@ $subjectNumber = isset($subject_number)?$subject_number:1;
                         <tr>
                             <th><?php echo __('NO') ?></th>
                             <th><?php echo __('Responsible Staff') ?></th>
-                            <th><?php echo __('Name of Trainer')?></th>
-                            <?php for($i=1;$i<=$subjectNumber;$i++): ?>
-                            <th><?php echo __('Subject').''.$i ?> </th>
-                            <?php endfor; ?>
-                            <th><?php echo __('Date of Conduct training')?></th>
-                            <th><?php echo __('Training/Meeting')?></th>
-                            <th><?php echo __('Training Place')?></th>
-                            <th><?php echo __('Participant')?></th>
-                            <th><?php echo __('Farmer or Vendor')?></th>
-                            <th><?php echo __('Gender')?></th>
-                            <th><?php echo __('Village ID')?></th>
+                            <th><?php echo __('Subject') ?> </th>                            
+                            <th><?php echo __('Date of Conduct Meeting')?></th>                            
+                            <th><?php echo __('Meeting Place')?></th>
+                            <th><?php echo __('Participant Name')?></th>
+                            <th><?php echo __('FBA or Farmer')?></th>
+                            <th><?php echo __('SEX')?></th>
+                            <th><?php echo __('ID-Village')?></th>
                             <th><?php echo __('Village')?></th>
                             <th><?php echo __('Commune')?></th>
                             <th><?php echo __('District')?></th>
@@ -116,52 +102,44 @@ $subjectNumber = isset($subject_number)?$subject_number:1;
                                 <?php echo $start+$key+1;?>
                             </td>
                             <td>
-                              <?php echo $value['TrainingDemo']['training_responsible_staff'] ?>
+                              <?php echo $value['MeetingDemo']['meeting_responsible_staff'] ?>
+                            </td>                            
+                            <td>
+                              <?php echo $value['MeetingDemo']['meeting_subject'] ?>
                             </td>
                             <td>
-                              <?php echo $value['TrainingDemo']['week_trainer'] ?>
+                                <?php echo $value['MeetingDemo']['meeting_date'] ?>
                             </td>
-                            <?php for ($i=1; $i <=$subjectNumber ; $i++) :?>
-                                <td>
-                                  <?php echo $value['TrainingDemo']['week_topic'.$i] ?>
-                                </td>
-                            <?php endfor; ?>
-                            <td>
-                              <?php echo $value['TrainingDemo']['training_datestart'] ?>
+                             <td>
+                                <?php echo $value['MeetingDemo']['meeting_location'] ?>
                             </td>
                             <td>
-
-                            </td>
-                            <td>
-                                <?php echo $value['TrainingDemo']['training_location'] ?>
-                            </td>
-                            <td>
-                                <?php echo $value['TrainingDemo']['participant_name'] ?>                                
+                                <?php echo $value['MeetingDemo']['participant_name_en'] ?>                                
                             </td>
                             
                             <td>
-                                <?php echo $value['TrainingDemo']['ftype'] ?>
+                                <?php echo $value['MeetingDemo']['ftype'] ?>
                             </td>
                             <td>
-                                <?php echo $value['TrainingDemo']['participant_gender'] ?>
+                                <?php echo $value['MeetingDemo']['participant_gender'] ?>
                             </td>
                             <td>
-                                <?php echo $value['TrainingDemo']['phum_code'] ?>
+                                <?php echo $value['MeetingDemo']['phum_code'] ?>
                             </td>
                             <td>
-                                <?php echo $value['TrainingDemo']['phum_name_en'] ?>
+                                <?php echo $value['MeetingDemo']['phum_name_en'] ?>
                             </td>
                             <td>
-                                <?php echo $value['TrainingDemo']['khum_name_en'] ?>
+                                <?php echo $value['MeetingDemo']['khum_name_en'] ?>
                             </td>
                             <td>
-                                <?php echo $value['TrainingDemo']['srok_name_en'] ?>
+                                <?php echo $value['MeetingDemo']['srok_name_en'] ?>
                             </td>
                             <td>
-                                <?php echo $value['TrainingDemo']['khet_name_en'] ?>
+                                <?php echo $value['MeetingDemo']['khet_name_en'] ?>
                             </td>
                              <td>
-                                <?php echo $value['TrainingDemo']['fba'] ?>
+                                <?php echo $value['MeetingDemo']['fba'] ?>
                             </td>
                             <td>
                             </td>

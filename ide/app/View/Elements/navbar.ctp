@@ -903,6 +903,28 @@
                 </li>
                 <li>
                     <a href="javascript:;"><i class="fa fa-phum"></i> 
+                        <span><?php echo __('Meeting') ?></span>
+                    </a>
+                    <ul class="acc-menu">
+                       <li>
+                            <?php 
+                            echo $this->Html->link(                                        
+                                        $this->Html->tag('i','',array('class'=>'fa fa-plus')).
+                                        $this->Html->tag('span',__('View'))
+                                    ,
+                                    array(
+                                        'controller' =>'MeetingDemos',
+                                        'action' => 'reportview'
+                                    ),
+                                    array('escape'=>false)
+                                );
+                             ?>
+                        </li>  
+                       
+                    </ul>
+                </li>
+                <li>
+                    <a href="javascript:;"><i class="fa fa-phum"></i> 
                         <span><?php echo __('FBA Register') ?></span>
                     </a>
                     <ul class="acc-menu">
